@@ -4,8 +4,7 @@ def find_max_sum(arr):
 	
 	for i in arr: 
 		
-		# Current max excluding i (No ternary in 
-		# Python) 
+		# Current max excluding i
 		new_excl = max(excl,incl)
 		
 		# Current max including i 
