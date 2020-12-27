@@ -1,5 +1,11 @@
 #!/bin/python3
-
+# Method Used: 
+## Create a 2d Matrix
+## initialte the first index with 1
+## loop through 2D matrix
+## ignore empty
+## Mark [i+1][j+1] if upper a[i] matches b[j]
+## Mark [i+1][j] if a not upper
 import math
 import os
 import random
