@@ -48,6 +48,9 @@ def quickSort(arr, low, high):
         quickSort(arr, pi+1, high)
 
 # Complete the activityNotifications function below.
+from bisect import bisect_left, insort_left
+ 
+ 
 def activityNotifications(expenditure, d):
     warnings = 0
      
