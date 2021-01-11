@@ -22,9 +22,10 @@ def minimumBribes(q):
                 hops+=2
             else:
                 hops+=1
-            
+        if(n<i+1):
+            l = [x<n for x in q[i+1:]]
+            if(True in l):hops+=1
     print(hops)
-            
 if __name__ == '__main__':
     t = int(input())
 
