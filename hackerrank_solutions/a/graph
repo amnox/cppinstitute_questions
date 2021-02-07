@@ -1,0 +1,48 @@
+#!/bin/python3
+
+import os
+import sys
+from itertools import permutations 
+#
+# Complete the jeanisRoute function below.
+#
+
+def findCost(matrix, route):
+    print(matrix, route)
+    return 9
+def jeanisRoute(k, roads,city):
+    #
+    # Write your code here.
+    #
+    l = len(roads)+1
+    #print(k,roads,city)
+    matrix = [[0 for _ in range(l)] for _ in range(l)]
+    #print(matrix)
+    for r in roads:
+        matrix[r[0]-1][r[1]-1] = r[2]
+    
+    routes = list(permutations(city))
+    cost = 999999
+    for route in routes:
+        cost = min(cost,findCost(matrix,route))
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    nk = input().split()
+
+    n = int(nk[0])
+
+    k = int(nk[1])
+
+    city = list(map(int, input().rstrip().split()))
+
+    roads = []
+
+    for _ in range(n-1):
+        roads.append(list(map(int, input().rstrip().split())))
+
+    result = jeanisRoute(k, roads,city)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
