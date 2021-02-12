@@ -11,4 +11,12 @@ def pick_box(arr, item):
         else:
             return arr[ind]
 
-print(pick_box([2, 7, 9, 12,12,13],12))
+print(pick_box([2, 7, 9, 12,12,13],12))\
+
+def height(root):
+    if root is None:
+        return -1
+    Ldepth = height(root.left)
+    Rdepth = height(root.right)
+    
+    return max(Ldepth,Rdepth)+1
